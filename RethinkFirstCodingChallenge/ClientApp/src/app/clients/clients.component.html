@@ -1,0 +1,14 @@
+<h1 id="tableLabel">Client List</h1>
+
+<p *ngIf="!clients"><em>Loading...</em></p>
+
+<div class="Clients" *ngIf="clients">
+  <div class="Client-controls"></div>
+  <div class="Client-clientCollection">
+    <div class="Client" *ngFor="let client of clients">
+      <div>{{client.firstName}} {{client.lastName}}</div>
+      <div>{{client.birthdate}}</div>
+      <div>{{client.gender}}</div>
+    </div>
+  </div>
+</div>
